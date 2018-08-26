@@ -15,7 +15,6 @@ const styles = {
     display: 'inline'
   },
   card: {
-    minWidth: 400,
     maxWidth: 650
   },
   bullet: {
