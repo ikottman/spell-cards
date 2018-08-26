@@ -1,7 +1,7 @@
 import React from 'react';
-import SpellCard from "./SpellCard";
+import SpellList from "./SpellList";
 
-const example = {
+const example1 = {
   "name": "Acid Arrow",
   "level": "2",
   "school": "Evocation",
@@ -34,14 +34,9 @@ class App extends React.Component {
     super();
   }
 
-  render() { 
-  return (
-    <div>
-      <SpellCard { ...example } />
-      <br/>
-      <SpellCard { ...example2 } />
-    </div>
-    );
+  render() {
+    const spells = [example1, example2];
+    return <SpellList spells={spells} />;
   }
 }
 
