@@ -1505,23 +1505,6 @@ const spells = [
     "class": "Bard, Cleric, Sorcerer, Warlock, Wizard"
   },
   {
-    "name": "Black Tentacles",
-    "description": "<p>Dark writhing tentacles occupy the ground in a square of 90 feet ridge you can see the range of the spell. For the duration of the spell, the tentacles make the difficult terrain.</p><p>When a creature enters the affected area for the first time in a turn or where it begins its turn, it must make a dexterity saving throw or it suffers 3d6 bludgeoning damage and is hampered by tentacles until the end of the spell. A creature that starts its turn in the area and is already hampered by the tentacles suffers 3d6 bludgeoning damage.</p><p>A creature hampered by the tentacles can use his action to a test Strength or Dexterity (at its option) opposite to the SD backup of your fate. If successful, it is free.</p>",
-    "page": "phb 238",
-    "range": "90 feet",
-    "components": "V, S, M",
-    "materials": "A piece of tentacle of an octopus or a giant squid.",
-    "ritual": "no",
-    "duration": "Up to 1 minute",
-    "concentration": "yes",
-    "casting_time": "1 action",
-    "level": "4th-level",
-    "school": "Conjuration",
-    "class": "Warlock, Wizard",
-    "archetype": "Warlock: Great Old One",
-    "patrons": "Great Old One"
-  },
-  {
     "name": "Expeditious Retreat",
     "description": "<p>This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.</p>",
     "page": "phb 238",
