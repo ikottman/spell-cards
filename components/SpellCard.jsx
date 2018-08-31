@@ -26,7 +26,7 @@ const styles = {
     gridTemplateColumns: '2fr',
     gridTemplateRows: 'auto'
   },
-  characterClass: {
+  class : {
     display: 'inline-block',
     gridColumnStart: 1,
     alignSelf: 'center',
@@ -46,6 +46,11 @@ class SpellCard extends React.Component {
   constructor() {
     super();
     this.renderHigherLevels = this.renderHigherLevels.bind(this);
+    this.renderDescription = this.renderDescription.bind(this);
+  }
+
+  renderDescription() {
+    return <div dangerouslySetInnerHTML={{__html: this.props.description}} />;
   }
 
   renderHigherLevels() {
@@ -54,12 +59,12 @@ class SpellCard extends React.Component {
         <div>
           <br/>
           <Divider />
-          <br/>
-          <Typography>{this.props.higher_levels}</Typography>
+          <Typography>
+          <div dangerouslySetInnerHTML={{__html: this.props.higher_levels}} />
+          </Typography>
         </div>
       );
     }
-    
   }
 
   render() {
@@ -72,8 +77,8 @@ class SpellCard extends React.Component {
             <Typography className={classes.name} variant="headline" component="h2">
               {this.props.name}  {bullet}  {this.props.level}
             </Typography>
-            <Typography className={classes.characterClass} color="textSecondary">
-              {this.props.character_classes}
+            <Typography className={classes.class } color="textSecondary">
+              {this.props.class}
               {bullet}
               {this.props.school}
             </Typography>
@@ -98,9 +103,8 @@ class SpellCard extends React.Component {
             </Typography>
             <Typography className={classes.value}>{this.props.components} {this.props.materials ? `(${this.props.materials})` : ''}</Typography>
             <br/>
-            <br/>
             <Typography component="p">
-              {this.props.description}
+              {this.renderDescription()}
             </Typography>
             {this.renderHigherLevels()}
         </CardContent>

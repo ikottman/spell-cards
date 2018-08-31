@@ -10,8 +10,9 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: '2fr',
-    gridTemplateRows: 'auto'
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: 'auto',
+    gridGap: '20px'
   }
 };
 
@@ -27,9 +28,8 @@ class SpellList extends React.Component {
     const { classes, spells } = this.props;
     const cards = spells.map((spell) => {
       return (
-        <div className={classes.center}>
-          <SpellCard  key={spell.name} { ...spell } />
-          <br></br>
+        <div key={spell.name} className={classes.center}>
+          <SpellCard { ...spell } />
         </div>
       );
     });
